@@ -1,0 +1,123 @@
+@media only screen and (min-width: 320.56px) {
+    .container {
+      padding: 0px;
+      display: flex; /* Adicionado para centralizar */
+      justify-content: center; /* Centraliza horizontalmente */
+      align-items: center; /* Centraliza verticalmente */
+      height: 100vh; /* Garante que ocupe toda a altura da tela */
+
+      .result-container {
+        width: 75%;
+      }
+      .main-container {
+        border-radius: 0px;
+        height: 100vh;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 375.65px) {
+    .container {
+      padding: 0px;
+      display: flex; /* Adicionado para centralizar */
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+
+      .result-container {
+        width: 55%;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 414.05px) {
+    .container {
+      padding: 0px;
+      display: flex; /* Adicionado para centralizar */
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+
+      .result-container {
+        width: 50%;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    .container {
+      padding: 0px;
+      display: flex; /* Adicionado para centralizar */
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+
+      .result-container {
+        width: 40%;
+      }
+      .main-container {
+        border-radius: 0px;
+        height: 100vh;
+      }
+      .main-title {
+        margin-top: 30px;
+        font-size: 60px;
+      }
+      h3 {
+        font-size: 25px;
+      }
+      span {
+        font-size: 20px;
+      }
+      .result-container-left,
+      .result-container-right {
+        padding: 10px;
+      }
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1024.28px) {
+    .container {
+      padding: 0px;
+      display: flex; /* Adicionado para centralizar */
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+
+      .result-container {
+        width: 75%;
+      }
+      .main-container {
+        border-radius: 0px;
+        height: 100vh;
+        width: 100%;
+        max-width: 100%;
+      }
+      .main-title {
+        margin-top: 30px;
+        font-size: 60px;
+      }
+      .result-containers {
+        width: 40%;
+      }
+      .result-container {
+        align-items: center;
+      }
+      h3 {
+        font-size: 25px;
+      }
+      span {
+        font-size: 20px;
+      }
+      .result-container-left,
+      .result-container-right {
+        padding: 10px;
+      }
+      p {
+        font-size: 20px;
+      }
+    }
+  }

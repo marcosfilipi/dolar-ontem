@@ -1,0 +1,12 @@
+<div class="date-picker-container flex justify-center">
+    <div class="title-quote text-white flex flex-col items-center w-full max-w-2">
+        <p class="text-2xl">Data da cotação:</p>
+        <!-- datepicker -->
+        <mat-form-field appearance="fill">
+            <mat-label>Selecione uma data</mat-label>
+            <input matInput (dateChange)="teste($event)" [matDatepicker]="picker" [(ngModel)]="selectedDate" />
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+    </div>
+</div>

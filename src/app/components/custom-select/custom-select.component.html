@@ -1,0 +1,11 @@
+<div class="country-select-container">
+    <span class="block mb-2 text-white text-center font-medium">Converter de:</span>
+    <div class="relative">
+        <select [(ngModel)]="selectedCountry"
+            class="block w-full p-2 rounded-xl shadow-sm focus:ring focus:ring-blue-400 ">
+            <option value="" disabled selected>Moeda</option>
+            <option *ngFor="let country of countries" [value]="country.code">{{ country.name }}</option>
+        </select>
+
+    </div>
+</div>

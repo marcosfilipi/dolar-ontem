@@ -1,0 +1,20 @@
+.country-select-container {
+  max-width: 150px;
+}
+
+/* Estilo do rótulo do select */
+label {
+  font-weight: bold;
+}
+
+/* Estilo do select */
+select {
+  background-color: #0990f9;
+  color: white;
+}
+
+/* Estilo das opções do select */
+select option {
+  padding: 0.5rem;
+  background-color: white;
+}
