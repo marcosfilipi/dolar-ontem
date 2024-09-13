@@ -1,4 +1,6 @@
+import { CommonModule } from "@angular/common";
 import { Component, Input } from "@angular/core";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 interface Country {
   name: string;
@@ -9,6 +11,8 @@ interface Country {
   selector: "app-select",
   templateUrl: "./select.component.html",
   styleUrls: ["./select.component.scss"],
+  standalone: true,
+  imports: [CommonModule, FormsModule, ReactiveFormsModule ],
 })
 export class SelectComponent {
   countries: Country[] = [
@@ -26,4 +30,5 @@ export class SelectComponent {
   @Input() choices: any[] = [];
   dolar: number = 0;
   reais: number = 0;
+  
 }

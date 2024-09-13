@@ -8,10 +8,12 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  cotacao: number = 0;
+  cotacao = '';
   url2 = `https://economia.awesomeapi.com.br/json/last/USD-BRL`;
   url3 = `https://economia.awesomeapi.com.br/json/daily/USD-BRL/2`;
-  cotacaoOntem: number = 0;
+  cotacaoOntem = '';
+  seguraDolar = 0;
+  seguraDolarOntem = 0;
   async ngOnInit() {
     this.getDolar();
 
@@ -52,16 +54,20 @@ export class AppComponent implements OnInit {
   }
   getDolar() {
     this.http.get<any>(this.url2).subscribe((response:any) => {
-      this.cotacao = parseFloat(response.USDBRL.bid);
+      this.seguraDolar = parseFloat(response.USDBRL.bid);
       // console.log(this.cotacao.toFixed(2)); //imprime o valor da moeda
     });
   }
   getDolarOntem() {
     this.http.get<any>(this.url3).subscribe((response:any) => {
-      this.cotacaoOntem = parseFloat(response[1].bid);
+      this.seguraDolarOntem = parseFloat(response[1].bid);
 
       // console.log(response[1].bid);
       // console.log(this.cotacaoOntem.toFixed(2));
     });
+  }
+  converter() {
+    this.cotacao = (this.price * this.seguraDolar).toFixed(2)
+    this.cotacaoOntem = (this.price * this.seguraDolarOntem).toFixed(2)
   }
 }
